@@ -24,3 +24,9 @@ gpa = 4.3
 print(round(gpa))
 
 print(round(gpa, 1))
+
+users = {
+    "firstName" : "Jio",
+    "age": 30,
+    "birthday": "January 11 1994"
+}
