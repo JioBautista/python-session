@@ -1,32 +1,22 @@
-first_name = "Jio Carlo"
-first_pet = "Chewy"
-second_pet = "Choco"
-birth_date = 1111994
-first_pet_birth_date = str(4212019)
-second_pet_birth_date = 7132020
-
-
-isAdmin = True
-
-
-# TERNARY OPERATOR
-# print("Welcome Admin user: " +first_name) if isAdmin == True else print("Welcome User")
-
-if isAdmin == True:
-    print("Welcome Admin " +first_name.upper())
-else:
-    print("Unauthorized user")
-
-print(first_name[0:3])
-
-gpa = 4.3
-
-print(round(gpa))
-
-print(round(gpa, 1))
+import sys
 
 users = {
-    "firstName" : "Jio",
-    "age": 30,
+    "firstName" : "Carlo",
+    "age": 21,
     "birthday": "January 11 1994"
 }
+
+if users["firstName"] == "Jio" or users["age"] == 30:
+    print("Correct information")
+else:
+    print("Incorrect information")
+
+playerchoice = input("""Enter...
+     1 for Rock,
+     2 for Paper,
+     3 for Scissors: """)
+
+player = int(playerchoice)
+
+if player < 1 or player > 3:
+    sys.exit("You must enter 1,2 or 3.")
