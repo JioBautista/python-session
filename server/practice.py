@@ -1,21 +1,26 @@
-import sys
-
-data = [11, "Jio", 30]
-
-users = {
-    "firstName" : "Carlo",
-    "birthday": "January 11 1994",
-    "age": 21
-}
-
-if users["firstName"] == "Jio" or users["age"] == 30:
-    print("Correct information")
-else:
-    print("Incorrect information")
-
+user = "Carlo"
 age = 30
-name = "Jio"
-country = "Philippines"
-txt = "Hello my name is {} and I am {} years old. I was born in {}"
+birthday = "January 11 1994"
+text = "This user's name is {} and the person's age is {}"
 
-print(txt.format(name, age, country))
+if user == "Jio" and age == 30:
+    print(text.format(user,age))
+elif user != "Jio":
+    print("Not the current user")
+else:
+    print("error")
+
+list1 = [1,2,3]
+list2 = [1,2,3]
+
+user1 = 10
+user2 = 10
+if user1 is user2:
+    print("user1 and user2 are the same")
+
+
+
+if list1 is list2:
+    print("list1 and list2 are the same object.")
+else:
+    print("Error")
