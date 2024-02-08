@@ -13,5 +13,9 @@ if users["firstName"] == "Jio" or users["age"] == 30:
 else:
     print("Incorrect information")
 
+age = 30
+name = "Jio"
+country = "Philippines"
+txt = "Hello my name is {} and I am {} years old. I was born in {}"
 
-print( 29 in data )
+print(txt.format(name, age, country))
