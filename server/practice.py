@@ -1,26 +1,14 @@
-user = "Carlo"
-age = 30
-birthday = "January 11 1994"
-text = "This user's name is {} and the person's age is {}"
+user = {
+    "first_name": "Jio",
+    "age": 30,
+    "birthday": "January 11 1994",
+    "dogs": ["Chewy", "Choco"],
+}
+message = "This persons name is {} and his pets' names are {} and {}"
 
-if user == "Jio" and age == 30:
-    print(text.format(user,age))
-elif user != "Jio":
-    print("Not the current user")
+user["first_name"] = "Carlo"
+
+if user["first_name"] == "Jio":
+    print(message.format(user["first_name"], user["dogs"[0]]))
 else:
-    print("error")
-
-list1 = [1,2,3]
-list2 = [1,2,3]
-
-user1 = 10
-user2 = 10
-if user1 is user2:
-    print("user1 and user2 are the same")
-
-
-
-if list1 is list2:
-    print("list1 and list2 are the same object.")
-else:
-    print("Error")
+    print("This person doesn't exist")
