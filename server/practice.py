@@ -4,6 +4,10 @@ user = {
     "birthday": "January 11 1994",
     "dogs": ["Chewy", "Choco"],
 }
+newUser = {
+    ("Jio", "Pacho"): {"age": 30, "birthday": "January 11, 1994"},
+    ("John", "Doe"): {"age": 30, "birthday": "December 11 1990"},
+}
 message = "This persons name is {} and his pets' names are {} and {}"
 updatedUser = "This persons name changed to {}"
 
@@ -15,12 +19,16 @@ elif user["first_name"] == "Carlo":
 else:
     print("This user doesn't exist")
 
-newDogs = ["Kratos", "Mimir", "Tyr"]
+newDogs = ["Kratos", "Mimir", "Tyr", "BamBam"]
 
-user["dogs"].insert(1, "Bambam")
-user["dogs"].append("Atreus")
 user["dogs"].extend(newDogs)
-user["dogs"].remove("Bambam")
-del user["dogs"][4]
+dogsCopy = user["dogs"].copy()
+dogsCopy.append("Odin")
 
-print(user["dogs"])
+for x in newUser:
+    if "Jio" in x:
+        print("correct")
+    elif "John" in x:
+        print("Also correct")
+    else:
+        print("Don't exist")
