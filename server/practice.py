@@ -18,21 +18,13 @@ user = {
     "dogs": ["Chewy", "Choco"],
 }
 
-user.update({"dogs": ["Chewy", "Choco", "Bambam"]})
-
 # STRING FORMATTING
-message = "This persons name is {}"
+message = "This persons name is {}, his age is {}, his birthday is {} and his pets names are {}"
 
-# IF STATEMENT
-if "Jio" in name:
-    print(message.format(name[0]))
-if "dogs" in user:
-    print("Key exists")
 
-# FOR LOOPS
-for keys in user.keys():
-    print(keys)
-for values in user.values():
-    print(values)
-for items in user.items():
-    print(items)
+#  FUNCTIONS
+def keyNames(fName, lName):
+    print("This persons first name is " + fName + " and last name is " + lName)
+
+
+keyNames(fName="Jio", lName="Pacho")
