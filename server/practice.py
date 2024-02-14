@@ -1,26 +1,30 @@
-# DATA variable
-
-data = [
-    {"user": "Jbautista", "age": 30},
-    {"user": "Chewy", "age": 4},
-    {"user": "Choco", "age": 3},
-]
+data = []
 
 
-class NewUsers:
-    def __init__(self, username, password):
+class User:
+    def __init__(self, username, password, email):
         self.username = username
         self.password = password
+        self.email = email
 
 
-def createNewUser(username, password):
-    newUser = NewUsers(username, password)
-    data.append({"user": newUser.username, "password": newUser.password})
+def createUser(username, password, email):
+    user = User(username, password, email)
+    data.append(
+        {"username": user.username, "password": user.password, "email": user.email}
+    )
 
 
-createNewUser("ChewyHumper", 1234)
-createNewUser("ChocoChomper", 1234)
-createNewUser("JBautista", 1234)
+def changePassword(user, newPass):
+    for x in data:
+        if user == x["username"]:
+            x["password"] = newPass
+
+
+createUser("Jbautista", 1234, "pachojio@gmail.com")
+createUser("Chewy", 1234, "Chewy@gmail.com")
+createUser("Choco", 1234, "Choco@gmail.com")
+changePassword("Jbautista", 325002350)
 
 for x in data:
     print(x)
