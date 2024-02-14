@@ -1,30 +1,26 @@
-# THIS IS A LIST
-dogs = ["Chewy", "Choco"]
-dogs.insert(1, "Bambam")
+# DATA variable
 
-# THIS IS A TUPLE
-name = ("Jio", "Carlo")
-
-# THIS IS A SET
-
-age = {28, 29, 30}
-
-# THIS IS A DICTIONARY
-user = {
-    "first": "Jio",
-    "last": "Pacho",
-    "age": 30,
-    "birthdate": "January 11, 1994",
-    "dogs": ["Chewy", "Choco"],
-}
-
-# STRING FORMATTING
-message = "This persons name is {}, his age is {}, his birthday is {} and his pets names are {}"
+data = [
+    {"user": "Jbautista", "age": 30},
+    {"user": "Chewy", "age": 4},
+    {"user": "Choco", "age": 3},
+]
 
 
-#  FUNCTIONS
-def keyNames(fName, lName):
-    print("This persons first name is " + fName + " and last name is " + lName)
+class NewUsers:
+    def __init__(self, username, password):
+        self.username = username
+        self.password = password
 
 
-keyNames(fName="Jio", lName="Pacho")
+def createNewUser(username, password):
+    newUser = NewUsers(username, password)
+    data.append({"user": newUser.username, "password": newUser.password})
+
+
+createNewUser("ChewyHumper", 1234)
+createNewUser("ChocoChomper", 1234)
+createNewUser("JBautista", 1234)
+
+for x in data:
+    print(x)
