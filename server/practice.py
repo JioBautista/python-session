@@ -1,30 +1,39 @@
 data = []
 
 
-class User:
-    def __init__(self, username, password, email):
-        self.username = username
-        self.password = password
-        self.email = email
+class Product:
+    def __init__(self, name, price):
+        self.name = name
+        self.price = price
 
 
-def createUser(username, password, email):
-    user = User(username, password, email)
+class videoGameConsole(Product):
+    def __init__(self, name, price, brand):
+        super().__init__(name, price)
+        self.brand = brand
+
+
+class Games(Product):
+    def __init__(self, name, price, year):
+        super().__init__(name, price)
+        self.year = year
+
+
+def addProducts(name, price, brand):
+    console = videoGameConsole(name, price, brand)
     data.append(
-        {"username": user.username, "password": user.password, "email": user.email}
+        {"Product name": console.name, "Price": console.price, "Brand": console.brand}
     )
 
 
-def changePassword(user, newPass):
-    for x in data:
-        if user == x["username"]:
-            x["password"] = newPass
+def addGames(name, price, brand):
+    games = Games(name, price, brand)
+    data.append({"Game name": games.name, "Price": games.price, "Year": games.year})
 
 
-createUser("Jbautista", 1234, "pachojio@gmail.com")
-createUser("Chewy", 1234, "Chewy@gmail.com")
-createUser("Choco", 1234, "Choco@gmail.com")
-changePassword("Jbautista", 325002350)
+addProducts("Playstation 4", 299.99, "Sony")
+addProducts("Nintendo Switch", 499.99, "Nintendo")
+addGames("God of War Ragnarok", 79.99, "2023")
 
 for x in data:
     print(x)
