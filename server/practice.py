@@ -19,6 +19,10 @@ class Games(Product):
         self.year = year
 
 
+class Shoes(Product):
+    pass
+
+
 def addProducts(name, price, brand):
     console = videoGameConsole(name, price, brand)
     data.append(
@@ -27,13 +31,23 @@ def addProducts(name, price, brand):
 
 
 def addGames(name, price, brand):
+    global msg
+    msg = "Hello World!"
     games = Games(name, price, brand)
     data.append({"Game name": games.name, "Price": games.price, "Year": games.year})
+
+
+def addShoes(name, price):
+    shoes = Shoes(name, price)
+    data.append({"Shoe name": shoes.name, "Shoe Price": shoes.price})
 
 
 addProducts("Playstation 4", 299.99, "Sony")
 addProducts("Nintendo Switch", 499.99, "Nintendo")
 addGames("God of War Ragnarok", 79.99, "2023")
+addShoes("Converse Chuck Tailor", 99.99)
 
 for x in data:
     print(x)
+
+print(msg)
