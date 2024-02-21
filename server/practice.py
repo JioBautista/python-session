@@ -48,5 +48,19 @@ addProducts("Nintendo Switch", 499.99, "Nintendo")
 addGames("God of War Ragnarok", 79.99, "2023")
 addShoes("Converse Chuck Tailor", 99.99)
 
+for x in products:
+    print(x)
 
-print(products)
+userInput = input("Enter username:")
+
+for x in users:
+    if userInput in x["name"]:
+        print(f"{userInput} succesfully logged in")
+    else:
+        print("Unknown user")
+
+
+f = open("server/demo.txt", "r")
+
+print(f.read())
+f.close()
