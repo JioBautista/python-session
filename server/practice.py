@@ -60,7 +60,9 @@ for x in users:
         print("Unknown user")
 
 
-f = open("server/demo.txt", "r")
-
-print(f.read())
+f = open("server/demo.txt", "w")
+f.write("Hello world 2!")
 f.close()
+
+f = open("server/demo.txt", "r")
+print(f.read())
