@@ -66,3 +66,31 @@ f.close()
 
 f = open("server/demo.txt", "r")
 print(f.read())
+
+# Stacks data structure
+
+
+class Stack:
+    def __init__(self):
+        self.items = []
+
+    def isEmpty(self):
+        return self.items == []
+
+    def push(self, item):
+        self.items.append(item)
+
+    def pop(self):
+        if not self.isEmpty():
+            return self.items.pop()
+        else:
+            return None
+
+
+stackCalls = Stack()
+stackCalls.push("Jio")
+stackCalls.push("Chewy")
+stackCalls.push("Choco")
+stackCalls.pop()
+
+print(stackCalls.items)
